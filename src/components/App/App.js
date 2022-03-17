@@ -3,8 +3,15 @@ import './App.css';
 function App() {
   return (
     <div>
-      Put components here to make them show up in the browser. Good Luck!
+  <h1>Ja<span className="highlight">mmm</span>ing</h1>
+  <div className="App">
+    <SearchBar />
+    <div className="App-playlist">
+      <SearchResults />
+      <Playlist />
     </div>
+  </div>
+</div>
   );
 }
 
