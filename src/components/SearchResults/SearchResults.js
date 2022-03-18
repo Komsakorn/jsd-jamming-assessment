@@ -1,10 +1,13 @@
 import './SearchResults.css';
 import TrackList from '../TrackList/TrackList.js';
-function SearchResults(props) {
-  return <div className="SearchResults">
+
+const SearchResults = ({searchResults, onAdd}) => {
+  return (
+  <div className="SearchResults">
   <h2>Results</h2>
-  <TrackList />
-</div>;
+  <TrackList lists={searchResults} onAdd={onAdd} isRemoval={false}/>
+</div>
+);
 }
 
 export default SearchResults;
