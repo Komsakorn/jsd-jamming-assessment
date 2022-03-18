@@ -15,7 +15,6 @@ const Track = ({track,isRemoval,onAdd,onRemove}) => {
       return <button className="Track-action" onClick={addTrack}>+</button>;
     }
   };
-
   return( <div className="Track">
   <div className="Track-information">
     <h3>{track.name}</h3>
@@ -24,5 +23,5 @@ const Track = ({track,isRemoval,onAdd,onRemove}) => {
   {renderAction()}
 </div>
   );
-}
+};
 export default Track;

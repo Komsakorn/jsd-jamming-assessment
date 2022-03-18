@@ -41,13 +41,13 @@ function App() {
   const [searchResults, setSearchResults] = useState(defaultData);
   const [playlistName, setPlaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  
 useEffect(()=>{
 Spotify.getAccessToken();},[]);
 
   const addTrack = (track) =>{
-if(playlistTracks.find((prevTrack) => prevTrack.id === track.id)){
-  return setPlaylistTracks([...playlistTracks, track]);
-}
+if(playlistTracks.find((prevTrack) => prevTrack.id === track.id)) return; 
+  setPlaylistTracks([...playlistTracks, track]);
   }
 const removeTrack = (track) =>{
   setPlaylistTracks(playlistTracks.filter((prevTrack)=>prevTrack.id !== track.id));
@@ -57,11 +57,11 @@ const updatePlaylistName = (name) => {
 }
 const savePlaylist = () => {
 const trackURIs = playlistTracks.map((track) => track.uri);
-Spotify.savePlaylist(playlistName,trackURIs).then(() => {
+Spotify.savePlaylist(playlistName, trackURIs).then(() => {
 setPlaylistTracks([]);
 setPlaylistName('New Playlist');
 });
-}
+};
 const search = (searchTerm) => {
   Spotify.search(searchTerm).then((tracks) => {
   setSearchResults(tracks)
