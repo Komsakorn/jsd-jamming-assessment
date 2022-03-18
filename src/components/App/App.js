@@ -6,36 +6,7 @@ import Playlist from '../Playlist/Playlist.js';
 import TrackList from '../TrackList/TrackList';
 import Spotify from '../../utils/Spotify.js';
 
-const defaultData =[
-  {
-    id: 0,
-    name: 'defaultName',
-    artist:'defaultArtist',
-    album:'defaultAlbum',
-    uri:111,
-  },
-  {
-    id: 1,
-    name: 'defaultName2',
-    artist:'defaultArtist2',
-    album:'defaultAlbum2',
-    uri:222,
-  },
-  {
-    id: 2,
-    name: 'defaultName3',
-    artist:'defaultArtisy3',
-    album:'defaultAlbum3',
-    uri:333,
-  },
-  {
-    id: 3,
-    name: 'defaultName4',
-    artist:'defaultArtist4',
-    album:'defaultAlbum4',
-    uri:444,
-  }
-]
+const defaultData =[]
 
 function App() {
   const [searchResults, setSearchResults] = useState(defaultData);
