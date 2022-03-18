@@ -4,8 +4,7 @@ import Track from '../Track/Track.js';
 const TrackList = ({lists,isRemoval,onAdd,onRemove}) => {
   return(
   <div className="TrackList">
-    {lists &&
-    lists.map((track) => (
+    {lists.map((track) => (
   <Track
   key={track.id}
   track={track}

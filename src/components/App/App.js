@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import './App.css';
 import SearchBar from '../SearchBar/SearchBar.js';
 import SearchResults from '../SearchResults/SearchResults.js';
 import Playlist from '../Playlist/Playlist.js';
 import TrackList from '../TrackList/TrackList';
-import Spotify from '../../utils/Spotify';
-import { useEffect } from 'react/cjs/react.production.min';
+import Spotify from '../../utils/Spotify.js';
 
 const defaultData =[
   {
